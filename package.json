@@ -4,7 +4,7 @@
   "description": "",
   "main": "./bin/www",
   "scripts": {
-    "nodemon": "nodemon ./bin/www",
+    "nodemon": "nodemon \"main\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

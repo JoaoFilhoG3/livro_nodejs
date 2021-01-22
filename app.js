@@ -12,7 +12,7 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Exemplo de Middleware da aplicação
+/** Exemplo de Middleware da aplicação */
 app.use(function (request, response, next) {
     if (request.url === "/favicon.ico") {
         response.writeHead(200, { "Content-Type": "image/x-icon" });
@@ -25,7 +25,7 @@ app.use(function (request, response, next) {
 //Definindo rota principal do servidor
 app.use("/", require("./routes"));
 
-//Manipulação de erros
+/** Manipulação de erros */
 app.use(function (request, response, next) {
     var err = new Error("Not Found");
     err.status = 404;
@@ -33,7 +33,7 @@ app.use(function (request, response, next) {
 });
 
 app.use(function (err, request, response, next) {
-    response.status(err.status || 500).json({err:err.message});
+    response.status(err.status || 500).json({ err: err.message });
 });
 
 //Iniciando servidor
