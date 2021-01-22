@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var mongo = require("../db/mongo");
+var mongoose = require("../db/mongoose");
 var StormtrooperModel = require("../model/StormtrooperModel")(mongo);
 var StormtrooperController = require("../controller/StormtrooperController")(StormtrooperModel);
 
