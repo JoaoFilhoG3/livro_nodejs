@@ -6,6 +6,6 @@ router.get("/", function(request, response){
     response.json({"nome":"joão filho", "email":"joao@joao.com"});
 });
 
-router.use("/stormtroopers", require("./stormtroopers"));
+router.use("/stormtroopers", require("./StormtrooperRoute"));
 
 module.exports = router;
